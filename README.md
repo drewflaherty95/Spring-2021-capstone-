@@ -10,17 +10,18 @@ This notebook contains the steps taken to pull the data from the SEC database an
 ### Data-cleanining
 Once the data had been collected it was cleaned in order for further analysis to be performed. The cleanining was done at the individual statement level as well as after merging the three dataframes. Key cleaning steps were to remove unneccessary rows and convert some columns to numerical values. 
 
-## Feature-engineering
+### Feature-engineering
 Three features were added to the merged dataframe:
 - Switch - the size of the switch (i.e. ones to thousands) a company made from one period to the next
 - Switch type - the movement of the switch  (i.e. up or down)
 - Numerical changes - changes from one period to the next of the numerical columns
 
-## EDA
+### EDA
 Assets and net income were explored further by doing exploratory data analysis. They were compared to scale, switch type, and each other. This was done to determine which features would be most useful in  creating a model. 
 
-## Modeling
+### Modeling
 Modeling was done through two approaches:
 - Including the change columns
 - Not including the change columns
+
 This was done to see if these columns had any predictive value or if total assets and net income were enough to make predictions. Random forest classifiers and decision tree classifiers were used in each approach to try and predict the type of switch a company would make. 
